@@ -1,0 +1,13 @@
+.header{
+    &__midle {
+        display: flex;
+        &-list {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+        &-button {
+            white-space: nowrap;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .header {
-    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    background: $lineral;
     border-radius: 0 0 12px 12px;
     &__overlay {
         position: relative;
@@ -9,19 +9,24 @@
         right: 0;
         width: 100%;
         height: 100%;
-        //background-color: rgba(0, 0, 0, 0.5);
         opacity: 1;
         z-index: 0;
         cursor: pointer;
-        //visibility: hidden;
         transition: visibility .3s, opacity .3s;
     }
     &__wrap {
         background-image: url("../../img/symbol-bac@1x.svg");
         background-repeat: no-repeat;
         background-size: cover;
+        z-index: 0;
+    }
+    &__gray {
+        background: $gray;
+        height: 42px;
+        display: none;
     }
     &__top {
+        padding-top: 50px;
         display: grid;
         grid-template-columns:  1fr auto ;
         grid-template-areas: "logo lan street phone face"
@@ -150,17 +155,6 @@
             bottom: 0;
         }
     }
-    &__h-back {
-        padding: 230px 0 0;
-        &-h2 {
-            font-weight: 700;
-            font-size: 38px;
-            line-height: 46px;
-            text-align: center;
-            color: $white;
-        }
-
-    }
 }
 
 
@@ -192,20 +186,30 @@
 
 @media screen and (max-width: 500px) {
     .header {
+        &__gray {
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
         &__top {
+            margin-top: -45px;
+            padding-top: 15px;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
-            grid-template-areas:"lan face"
+            grid-template-areas:"lan phone"
                                  "logo burg"
                                  "men men";
             &-facebook {
-                justify-self: end ;
+                display: none;
             }
             &-addresses {
-                display: none;
+                display: none;;
             }
             &-tel {
-                display: none;
+                justify-self: end;
+                &::after {
+                    padding: 0;
+                }
             }
             &-menu {
                 position: absolute;
@@ -224,6 +228,7 @@
                 &.show {
                     transform: translateX(0);
                     opacity: 1;
+                    z-index: 4;
                 }
             }
             &-burger {
@@ -233,12 +238,16 @@
         &__overlay.show {
             visibility: visible;
             opacity: 1;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: $overlay
         }
     }
-    .container {
-        background: linear-gradient(to bottom,rgba(245, 245, 250, 0.2) 45px,rgba(245, 245, 250, 0) 0);
-    }
+    //.container::after {
+    //    position: fixed;
+    //    max-width: 500px;
+    //    min-width: 375px;
+    //    height: 45px;
+    //    background: rgba(245, 245, 250, 0.2);
+    //}
 
     .stop-scroll {
         overflow: hidden;
