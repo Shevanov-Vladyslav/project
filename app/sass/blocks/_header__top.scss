@@ -11,13 +11,13 @@
         height: 100%;
         opacity: 1;
         z-index: 0;
-        cursor: pointer;
         transition: visibility .3s, opacity .3s;
     }
     &__wrap {
         background-image: url("../../img/symbol-bac@1x.svg");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 679px 800px;
+        background-position: top center;
         z-index: 0;
     }
     &__gray {
