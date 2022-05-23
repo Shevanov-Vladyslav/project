@@ -1,6 +1,27 @@
 .header {
     background: $lineral;
     border-radius: 0 0 12px 12px;
+    position: relative;
+    &::before {
+        content: '';
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background: $shadow-one;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -10px;
+    }
+    &::after {
+        content: '';
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background: $shadow-two;
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        bottom: -20px;
+    }
     &__overlay {
         position: relative;
         top: 0;

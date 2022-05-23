@@ -1,0 +1,110 @@
+.header {
+    &__bottom {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        &-link {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $links;
+            &::after {
+                content: '';
+                width: 5px;
+                height: 9px;
+                background-image: url("../../img/arrow.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                color: $links;
+            }
+        }
+        &-h2 {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            background: $lineral-h2;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+        &-wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "first second third"
+                                 "fourth fifth sixth";
+            gap: 60px;
+        }
+        &-item1 {
+            grid-area: first;
+        }
+        &-item2 {
+            grid-area: second;
+        }
+        &-item3 {
+            grid-area: third;
+        }
+        &-item4 {
+            grid-area: fourth;
+        }
+        &-item5 {
+            grid-area: fifth;
+        }
+        &-item6 {
+            grid-area: sixth;
+        }
+        &-item {
+            &-icon {
+                padding-bottom: 30px;
+                display: inline-flex;
+            }
+            &-link {
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 27px;
+                color: $links;
+                padding-bottom: 15px;
+                display: inline-flex;
+            }
+            &-text {
+                font-size: 16px;
+                line-height: 26px;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .header {
+        &__bottom {
+            &-wrap {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas: "first second"
+                                     "fourth  third"
+                                     "fifth sixth";
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header {
+        &__bottom {
+            &-wrap {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, auto);
+                grid-template-areas: "first"
+                                     "second"
+                                     "fourth"
+                                     "third"
+                                     "fifth"
+                                     "sixth";
+            }
+        }
+    }
+}

@@ -22,7 +22,10 @@
             cursor: pointer;
             padding-bottom: 30px;
             &--active {
-                color: $pink-red;
+                background: $lineral-active;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-fill-color: transparent;
             }
         }
         &-inform {
@@ -56,12 +59,12 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             &-list {
-                width: 100%;
+                //width: 100%;
                 flex-direction: row;
                 overflow: auto;
                 -ms-overflow-style: none;
                 max-width: 707px;
-                padding-left: 550px;
+                padding-left: 595px;
                 &::-webkit-scrollbar{
                     width: 0;
                 }
@@ -79,3 +82,4 @@
         }
     }
 }
+
