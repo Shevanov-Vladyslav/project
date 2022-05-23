@@ -85,7 +85,7 @@
                     </div>
                 </section>
                 <section class="header__bottom">
-                    <a class="header__bottom-link" href="#" class="services">services</a>
+                    <a class="header__bottom-link" href="#">services</a>
                     <h2 class="header__bottom-h2">What can we do better than others?</h2>
                     <div class="header__bottom-wrap">
                         <div class="header__bottom-item1">
@@ -110,7 +110,7 @@
                             </a>
                             <a class="header__bottom-item-link" href="#" >IT and e-commerce</a>
                             <p class="header__bottom-item-text">
-                                An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.</p>
+                                An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.   lorem500</p>
                         </div>
                         <div class="header__bottom-item2">
                             <a class="header__bottom-item-icon" href="#">
@@ -271,9 +271,25 @@
     <main>
         <section class="slider">
             <div class="container slider__wrap">
-                <img class="slider__img" src="img/men-desktop-1x.jpg" alt="men" aria-label="Alexander Alexandrovsky">
-                <div class="slider__inform">
-                    <a class="slider__inform-link" href="#">команда ></a>
+                <div class="slider__shell">
+                    <div class="slider__men">
+                        <picture>
+                            <source media="(max-width: 991px) and (min-width: 768px)" srcset="img/men-tablet1-1x.jpg 1x, img/men-tablet1-2x.jpg 2x">
+                            <source media="(max-width: 767px) and (min-width: 375px)" srcset="img/men-tablet-1x.jpg 1x, img/men-tablet-2x.jpg 2x">
+                            <img class="slider__img" src="img/men-desktop-1x.jpg"  srcset="img/men-desktop-2x.jpg 2x" alt="men" aria-label="Alexander Alexandrovsky" width="400" height="344">
+                        </picture>
+                    </div>
+                    <div class="slider__inform">
+                        <a class="slider__inform-link" href="#">команда</a>
+                        <h2 class="slider__inform-h2">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                        <p class="slider__inform-name">Олександр Олександровський</p>
+                        <p class="slider__inform-function">Керуючий партнер</p>
+                    </div>
+                </div>
+                <div class="slider__points" aria-label="slider">
+                    <span class="slider__point slider__point--active" aria-label="slider__point"></span>
+                    <span class="slider__point" aria-label="slider__point"></span>
+                    <span class="slider__point" aria-label="slider__point"></span>
                 </div>
             </div>
         </section>

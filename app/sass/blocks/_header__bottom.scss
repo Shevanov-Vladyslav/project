@@ -11,13 +11,13 @@
             text-decoration: none;
             color: $links;
             &::after {
-                content: '';
+                content: ' ';
                 width: 5px;
-                height: 9px;
-                background-image: url("../../img/arrow.svg");
+                height: 10px;
+                background-image: url("../../img/arr.svg");
                 background-repeat: no-repeat;
-                background-position: center;
-                color: $links;
+                background-position: right top;
+                padding-left: 10px;
             }
         }
         &-h2 {
@@ -39,6 +39,8 @@
         }
         &-item1 {
             grid-area: first;
+            display: flex;
+            flex-direction: column;
         }
         &-item2 {
             grid-area: second;
