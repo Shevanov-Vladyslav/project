@@ -1,0 +1,188 @@
+.sponsors{
+    &__hr {
+        padding: 30px 0 0;
+    }
+    &__h2 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $menu-back;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 120px 120px 120px;
+        grid-template-areas: "one two three four"
+                             "fifth six seven eight"
+                             "nine ten eleven twelve";
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-position: center;
+        &--1 {
+            grid-area: one;
+            background-color: $one ;
+            background-image: url("../../img/one.png");
+        }
+        &--2 {
+            grid-area: two;
+            background-color: $two ;
+            background-image: url("../../img/two.png");
+        }
+        &--3 {
+            grid-area: three;
+            background-color: $three ;
+            background-image: url("../../img/three.png");
+        }
+        &--4 {
+            grid-area: four;
+            background-color: $four ;
+            background-image: url("../../img/four.png");
+        }
+        &--5 {
+            grid-area: fifth;
+            background-color: $fifth ;
+            background-image: url("../../img/fifth.png");
+        }
+        &--6 {
+            grid-area: six;
+            background-color: $six ;
+            background-image: url("../../img/six.png");
+        }
+        &--7 {
+            grid-area: seven;
+            background-color: $seven ;
+            background-image: url("../../img/seven.png");
+        }
+        &--8 {
+            grid-area: eight;
+            background-color: $eight ;
+            background-image: url("../../img/eight.png");
+        }
+        &--9 {
+            grid-area: nine;
+            background-color: $nine ;
+            background-image: url("../../img/nine.png");
+        }
+        &--10 {
+            grid-area: ten;
+            background-color: $ten ;
+            background-image: url("../../img/ten.png");
+        }
+        &--11 {
+            grid-area: eleven;
+            background-color: $eleven ;
+            background-image: url("../../img/eleven.png");
+        }
+        &--12 {
+            grid-area: twelve;
+            background-color: $twelve ;
+            background-image: url("../../img/twelve.png");
+        }
+    }
+}
+
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .sponsors {
+        &__item {
+            background-repeat: no-repeat;
+            background-position: center;
+            &--1 {
+                background-image: url("../../img/one2x.png");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &--2 {
+                background-image: url("../../img/two2x.png");
+            }
+            &--3 {
+                background-image: url("../../img/three2x.png");
+            }
+            &--4 {
+                background-image: url("../../img/four2x.png");
+            }
+            &--5 {
+                background-image: url("../../img/fifth2x.png");
+            }
+            &--6 {
+                background-image: url("../../img/six2x.png");
+            }
+            &--7 {
+                background-image: url("../../img/seven2x.png");
+            }
+            &--8 {
+                background-image: url("../../img/eight2x.png");
+            }
+            &--9 {
+                background-image: url("../../img/nine2x.png");
+            }
+            &--10 {
+                background-image: url("../../img/ten2x.png");
+            }
+            &--11 {
+                background-image: url("../../img/eleven2x.png");
+            }
+            &--12 {
+                background-image: url("../../img/twelve2x.png");
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .sponsors {
+        &__wrap {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 120px 120px 120px 120px;
+            grid-template-areas: "one two three"
+                                 "four fifth six"
+                                 "seven eight nine"
+                                 "ten eleven twelve";
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    .sponsors {
+        &__wrap {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 120px 120px 120px 120px 120px 120px;
+            grid-template-areas: "one two"
+                                 "three four"
+                                 "fifth six"
+                                 "seven eight"
+                                 "nine ten"
+                                 "eleven twelve";
+        }
+    }
+}
+
+@media screen and (max-width: 470px){
+    .sponsors {
+        &__wrap {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 120px);
+            grid-template-areas: "one"
+                                 "two"
+                                 "three"
+                                 "four"
+                                 "fifth"
+                                 "six";
+        }
+        &__items {
+            &--7,
+            &--8,
+            &--9,
+            &--10,
+            &--11,
+            &--12{
+                display: none;
+            }
+        }
+    }
+}
