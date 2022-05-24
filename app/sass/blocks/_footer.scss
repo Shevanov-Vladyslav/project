@@ -1,0 +1,130 @@
+.footer {
+    background: $news-back;
+    &__wrap {
+        border-top: 3px solid $point-af-bef;
+        padding: 30px 0;
+        margin: 0 30px;
+        display: grid;
+        grid-template-columns:  auto auto auto auto 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "one  one one two three"
+                             "four five six six six";
+        justify-content: start;
+        align-items: center;
+
+    &-addresses {
+        grid-area: one;
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: $menu-back;
+        &::after {
+            content: ' ';
+            width: 6px;
+            height: 6px;
+            background-image: url("../../img/point.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 0 10px;
+        }
+    }
+    &-map {
+        grid-area: two;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $links;
+    }
+    &-inc {
+        grid-area: three;
+        justify-self: end;
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray-text;
+    }
+    &-facebook {
+        grid-area: four;
+    }
+    &-tel {
+        grid-area: five;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $phone;
+        text-decoration: none;
+        &::after {
+            content: ' ';
+            width: 6px;
+            height: 6px;
+            background-image: url("../../img/point.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 0 10px;
+        }
+        &::before {
+            content: ' ';
+            width: 6px;
+            height: 6px;
+            background-image: url("../../img/point.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 0 10px;
+        }
+    }
+    &-email {
+        grid-area: six;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $links;
+        text-decoration: none;
+    }
+}
+}
+
+@media screen and (max-width: 660px){
+    .footer {
+        &__wrap {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas: "one"
+                                 "two"
+                                 "four"
+                                 "five"
+                                 "six"
+                                 "three";
+            justify-items: center;
+            &-addresses {
+                padding-bottom: 10px;
+                &::after {
+                    display: none;
+                }
+            }
+            &-map {
+                padding-bottom: 20px;
+            }
+            &-facebook {
+                padding-bottom: 10px;
+            }
+            &-tel {
+                padding-bottom: 10px;
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+            &-email {
+                padding-bottom: 30px;
+            }
+            &-inc {
+                justify-self: center;
+            }
+        }
+    }
+}
