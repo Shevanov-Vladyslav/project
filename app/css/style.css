@@ -1299,7 +1299,7 @@
   content: ' ';
   width: 6px;
   height: 6px;
-  background-image: url("../../img/point1.svg");
+  background-image: url("../../img/point.svg");
   background-repeat: no-repeat;
   background-position: center center;
   padding: 0 10px;
@@ -1476,6 +1476,106 @@
     grid-area: burg;
     display: block;
     justify-self: end;
+  }
+}
+
+.main-a-top__wrap {
+  padding: 60px 180px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "inform stat";
+  gap: 30px;
+}
+
+.main-a-top__information {
+  grid-area: inform;
+  max-width: 600px;
+}
+
+.main-a-top__information-h2 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.main-a-top__information-text {
+  font-size: 19px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.main-a-top__statistics {
+  grid-area: stat;
+  max-width: 388px;
+  padding-left: 30px;
+}
+
+.main-a-top__statistics-h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.main-a-top__statistics-h2--year::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../img/year-b.svg");
+  padding-right: 32px;
+}
+
+.main-a-top__statistics-h2--client::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../img/client-b.svg");
+  padding-right: 32px;
+}
+
+.main-a-top__statistics-h2--hour::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../img/hour-b.svg");
+  padding-right: 32px;
+}
+
+.main-a-top__statistics-text {
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+}
+
+@media screen and (max-width: 1100px) {
+  .main-a-top__wrap {
+    padding: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-a-top__wrap {
+    grid-template-areas: "inform" "stat";
+  }
+  .main-a-top__wrap__information {
+    width: 100%;
+  }
+  .main-a-top__wrap__statistics {
+    width: 100%;
+    border-left: 3px solid black;
   }
 }
 

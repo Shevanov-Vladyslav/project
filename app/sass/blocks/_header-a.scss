@@ -66,15 +66,17 @@
         line-height: 20px;
         color: $gray-text;
         margin: 0;
+
         &::before {
             content: ' ';
             width: 6px;
             height: 6px;
-            background-image: url("../../img/point1.svg");
+            background-image: url("../../img/point.svg");
             background-repeat: no-repeat;
             background-position: center center;
             padding: 0 10px;
         }
+
         &::after {
             content: '';
             width: 15px;
@@ -83,7 +85,6 @@
             background-repeat: no-repeat;
             background-position: right;
             padding: 0 10px;
-
         }
     }
     &__tel {
