@@ -2,7 +2,7 @@
     background: $news-back;
     &__wrap {
         border-top: 3px solid $point-af-bef;
-        padding: 30px 0;
+        padding: 23px 0;
         margin: 0 30px;
         display: grid;
         grid-template-columns:  auto auto auto auto 1fr;
@@ -143,6 +143,20 @@
             }
             &-inc {
                 justify-self: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .footer {
+        &__wrap {
+            padding-top: 14px;
+            margin: 0;
+            &-addresses {
+                font-size: 12px;
+                line-height: 15px;
+                padding-top: 31px;
             }
         }
     }

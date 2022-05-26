@@ -8,6 +8,8 @@
             text-align: center;
             color: $white;
             padding-bottom: 292px;
+            margin-top: 49px;
+            margin-bottom: 8px;
         }
         &-scroll {
             position: relative;
@@ -83,7 +85,11 @@
 @media screen and (max-width: 500px) {
     .header {
         &__h-back {
-            padding: 98px 0 75px;
+            padding: 0;
+            margin-top: 114px;
+            &-h2 {
+                padding-bottom: 162px;
+            }
         }
     }
 }

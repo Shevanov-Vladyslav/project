@@ -71,9 +71,9 @@
         border-radius: 50%;
         background: $links;
         opacity: 0.2;
-        margin-left: 15px;
         transition-duration: 1s;
         transition-property: opacity;
+        margin: 9px 0 9px 15px;
         &:nth-child(4) {
             display: none;
         }
@@ -137,4 +137,15 @@
     }
 }
 
-
+@media screen and (max-width: 500px) {
+    .slider {
+        padding: 53px 0;
+        padding-bottom: 43px;
+        &__inform {
+            &-h2 {
+                font-size: 30px;
+                line-height: 37px;
+            }
+        }
+    }
+}

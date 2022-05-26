@@ -43,7 +43,7 @@
     }
     &__gray {
         background: $gray;
-        height: 42px;
+        height: 45px;
         width: 500px;
         display: none;
     }
@@ -215,7 +215,7 @@
 
 @media screen and (max-width: 600px) {
     .container {
-        padding: 0 15px;
+        padding: 0 30px;
     }
 }
 
@@ -235,6 +235,7 @@
             grid-template-areas:"lan phone"
                                  "logo burg"
                                  "men men";
+            gap: 12px 0;
             &-facebook {
                 display: none;
             }
