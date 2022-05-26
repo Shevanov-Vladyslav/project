@@ -39,11 +39,12 @@
         background-repeat: no-repeat;
         background-size: 679px 800px;
         background-position: top center;
-        z-index: 0;
+        z-index: -1;
     }
     &__gray {
         background: $gray;
         height: 42px;
+        width: 500px;
         display: none;
     }
     &__top {
@@ -61,6 +62,8 @@
             grid-area: lan;
             display: flex;
             justify-content: center;
+            z-index: 10;
+            position: relative;
             &--active {
                 background-color: $pink-red;
                 border-radius: 8px;
@@ -76,6 +79,8 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 padding: 5px 7px;
+                transition-duration: 1s;
+                transition-property: background-color;
                 &:not(.header__top-lang--active):hover{
                     border-radius: 8px;
                     background-color: rgba(255, 255, 255, 0.2);
@@ -114,6 +119,8 @@
             line-height: 20px;
             color: $white;
             text-decoration: none;
+            position: relative;
+            z-index: 10;
             &::after {
                 content: ' ';
                 width: 6px;
@@ -126,6 +133,11 @@
         }
         &-facebook {
             grid-area: face;
+
+            path {
+                transition-duration: 0.5s;
+                transition-property: fill;
+            }
             path:hover {
                 fill: $pink-red;
             }
@@ -145,6 +157,8 @@
             line-height: 20px;
             color: $white;
             border-bottom: 2px solid transparent;
+            transition-duration: 0.5s;
+            transition-property: border-bottom-color;
             &:hover {
                 border-bottom: 2px solid $white;
             }
@@ -211,7 +225,7 @@
         &__gray {
             display: block;
             position: relative;
-            z-index: 2;
+            z-index: 0;
         }
         &__top {
             margin-top: -45px;
@@ -227,7 +241,7 @@
             &-addresses {
                 display: none;;
             }
-            &-logo {
+            &-logos {
                 width: 74px;
                 height: 57px;
             }

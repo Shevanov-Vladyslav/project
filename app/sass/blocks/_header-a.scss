@@ -34,7 +34,6 @@
     &__langs {
         grid-area: lan;
         display: flex;
-        //flex-direction: column;
     }
     &__lang {
         color: $gray-text;
@@ -44,6 +43,8 @@
         text-decoration: none;
         text-transform: uppercase;
         padding: 5px 7px;
+        transition-duration: 0.5s;
+        transition-property: border;
         &--active{
             background-color: $pink-red;
             border-radius: 8px;
@@ -106,6 +107,10 @@
         }
     &__facebook {
         grid-area: face;
+        path {
+            transition-duration: 0.5s;
+            transition-property: fill;
+        }
         path:hover {
             fill: $pink-red;
         }
@@ -123,6 +128,8 @@
         font-size: 16px;
         line-height: 20px;
         color: $links;
+        transition-duration: 0.5s;
+        transition-property: border;
         &:hover {
             border-bottom: 2px solid $links;
         }
@@ -162,11 +169,6 @@
             bottom: 0;
         }
     }
-    &__gray {
-        background: $gray;
-        height: 42px;
-        display: none;
-    }
 
 }
 
@@ -197,10 +199,9 @@
 
 @media screen and (max-width: 500px) {
     .header-a {
-        &__gray {
-            display: block;
+        &__langs {
             position: relative;
-            z-index: 2;
+            z-index: 10;
         }
         &__wrap {
             margin-top: -45px;
@@ -217,7 +218,7 @@
         &__addr {
             display: none;;
         }
-        &__logo {
+        &__log {
             width: 74px;
             height: 57px;
         }
@@ -232,6 +233,8 @@
         }
         &__tel {
             justify-self: end;
+            position: relative;
+            z-index: 10;
             &::after {
                 padding: 0;
             }
@@ -240,6 +243,9 @@
             grid-area: burg;
             display: block;
             justify-self: end;
+        }
+        &__menu {
+            display: none;
         }
     }
 }

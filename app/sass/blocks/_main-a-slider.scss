@@ -1,0 +1,104 @@
+.main-a-slider {
+    background: $news-back;
+    &__wrap {
+        padding: 30px 60px;
+    }
+    &__h2 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $menu-back;
+        padding-bottom: 30px;
+    }
+    &__cont {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "first second third fourth";
+        gap: 40px;
+        padding-bottom: 30px;
+    }
+    &__item-1 {
+        grid-area: first;
+        background: $white;
+        width: 100%;
+        padding: 25px 0;
+    }
+    &__item-2 {
+        grid-area: second;
+        background: $white;
+        width: 100%;
+        padding: 25px 0;
+    }
+    &__item-3 {
+        grid-area: third;
+        background: $white;
+        width: 100%;
+        padding: 25px 0;
+    }
+    &__item-4 {
+        grid-area: fourth;
+        background: $white;
+        width: 100%;
+        padding: 25px 0;
+    }
+    &__img-1 {
+        margin: 0 auto;
+        display: block;
+    }
+    &__img-2 {
+        margin: 0 auto;
+        display: block;
+    }
+    &__img-3 {
+        margin: 0 auto;
+        display: block;
+    }
+    &__img-4 {
+        margin: 0 auto;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .main-a-slider {
+        &__img-1 {
+            width: 60px;
+            height: 40px;
+        }
+        &__img-2 {
+            width: 106px;
+            height: 40px;
+        }
+        &__img-3 {
+            width: 130px;
+            height: 40px;
+        }
+        &__img-4 {
+            width: 110px;
+            height: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main-a-slider {
+        &__cont {
+            grid-template-columns: 1fr;
+            grid-template-areas: "first";
+        }
+        &__item-2 {
+            display: none;
+        }
+        &__item-3 {
+            display: none;
+        }
+        &__item-4 {
+            display: none;
+        }
+
+    }
+}

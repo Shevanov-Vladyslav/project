@@ -72,8 +72,22 @@
         background: $links;
         opacity: 0.2;
         margin-left: 15px;
+        transition-duration: 1s;
+        transition-property: opacity;
+        &:nth-child(4) {
+            display: none;
+        }
+        &:nth-child(5) {
+            display: none;
+        }
+        &:nth-child(6) {
+            display: none;
+        }
         &--active {
             opacity: 1;
+        }
+        &:not(.slider__point--active):hover {
+            opacity: 0.6;
         }
     }
 }
@@ -108,6 +122,17 @@
             width: 100%;
             -o-object-fit: cover;
             object-fit: cover;
+        }
+        &__point {
+            &:nth-child(4) {
+                display: block;
+            }
+            &:nth-child(5) {
+                display: block;
+            }
+            &:nth-child(6) {
+                display: block;
+            }
         }
     }
 }

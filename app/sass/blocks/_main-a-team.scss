@@ -3,7 +3,6 @@
     background-size: contain;
     width: 100%;
     &__wrap {
-        max-width: 1440px;
         padding: 163px 0;
 
     }
@@ -54,5 +53,11 @@
             font-size: 36px;
             line-height: 44px;
         }
+    }
+}
+
+@media (min-resolution: 144dpi),(min-resolution: 1.5dppx) {
+    .main-a-team {
+        background: url("../../img/team-2x.jpg");
     }
 }

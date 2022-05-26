@@ -11,79 +11,98 @@
                              "four five six six six";
         justify-content: start;
         align-items: center;
-
-    &-addresses {
-        grid-area: one;
-        margin: 0;
-        font-size: 16px;
-        line-height: 20px;
-        color: $menu-back;
-        &::after {
-            content: ' ';
-            width: 6px;
-            height: 6px;
-            background-image: url("../../img/point.svg");
-            background-repeat: no-repeat;
-            background-position: center center;
-            padding: 0 10px;
+        &-facebook {
+            grid-area: four;
+            .path {
+                transition-duration: 0.5s;
+                transition-property: fill;
+            }
+            .path:hover {
+                fill: $pink-red;
+            }
         }
-    }
-    &-map {
-        grid-area: two;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $links;
-    }
-    &-inc {
-        grid-area: three;
-        justify-self: end;
-        margin: 0;
-        font-size: 16px;
-        line-height: 20px;
-        color: $gray-text;
-    }
-    &-facebook {
-        grid-area: four;
-    }
-    &-tel {
-        grid-area: five;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
-        color: $phone;
-        text-decoration: none;
-        &::after {
-            content: ' ';
-            width: 6px;
-            height: 6px;
-            background-image: url("../../img/point.svg");
-            background-repeat: no-repeat;
-            background-position: center center;
-            padding: 0 10px;
+        &-addresses {
+            grid-area: one;
+            margin: 0;
+            font-size: 16px;
+            line-height: 20px;
+            color: $menu-back;
+            &::after {
+                content: ' ';
+                width: 6px;
+                height: 6px;
+                background-image: url("../../img/point.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+                padding: 0 10px;
+            }
         }
-        &::before {
-            content: ' ';
-            width: 6px;
-            height: 6px;
-            background-image: url("../../img/point.svg");
-            background-repeat: no-repeat;
-            background-position: center center;
-            padding: 0 10px;
+        &-map {
+            grid-area: two;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $links;
         }
-    }
-    &-email {
-        grid-area: six;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
-        color: $links;
-        text-decoration: none;
+        &-inc {
+            grid-area: three;
+            justify-self: end;
+            margin: 0;
+            font-size: 16px;
+            line-height: 20px;
+            color: $gray-text;
+        }
+        &-tel {
+            grid-area: five;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $phone;
+            text-decoration: none;
+            &::after {
+                content: ' ';
+                width: 6px;
+                height: 6px;
+                background-image: url("../../img/point.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+                padding: 0 10px;
+            }
+            &::before {
+                content: ' ';
+                width: 6px;
+                height: 6px;
+                background-image: url("../../img/point.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+                padding: 0 10px;
+            }
+        }
+        &-email {
+            grid-area: six;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $links;
+            text-decoration: none;
+            transition-duration: 1s;
+            transition-property: color;
+            &:hover {
+                color: $pink-red;
+            }
+        }
     }
 }
+
+.path {
+    transition-duration: 0.5s;
+    transition-property: fill;
+}
+.path:hover {
+    fill: $pink-red;
 }
 
 @media screen and (max-width: 660px){

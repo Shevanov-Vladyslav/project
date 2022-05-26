@@ -18,7 +18,12 @@
             border: 3px solid $white;
             opacity: 0.5;
             border-radius: 50%;
-            &:after {
+            transition-duration: 0.5s;
+            transition-property: background-color;
+            &:hover {
+                border: 3px solid $pink-red;
+            }
+            &::after {
                 content: ' ';
                 width: 12px;
                 height: 3px;
@@ -27,8 +32,13 @@
                 top: 40%;
                 right: 0;
                 background: $white;
+                transition-duration: 0.5s;
+                transition-property: background;
             }
-            &:before {
+            &:hover::after {
+                background: $pink-red;
+            }
+            &::before {
                 content: ' ';
                 height: 12px;
                 width: 3px;
@@ -37,9 +47,16 @@
                 top: 40%;
                 right: 0;
                 background: $white;
+                transition-duration: 0.5s;
+                transition-property: background;
             }
-            &:hover {
-                stroke: $pink-red;
+            &:hover::before {
+                background: $pink-red;
+            }
+            a {
+                width: 42px;
+                height: 42px;
+                display: block;
             }
         }
 

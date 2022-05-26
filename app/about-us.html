@@ -6,16 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About us</title>
+    <link rel="preload" href="fonts/montserrat-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header-a">
+        <div class="header__gray"></div>
         <div class="container ">
-            <div class="header__gray"></div>
             <div class="header-a__wrap">
                 <div class="header-a__logos">
-                    <a class="header-a__logo" href="#">
-                        <svg width="130" height="60" viewBox="0 0 130 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a class="header-a__logo" href="index.html" aria-label="logo">
+                        <svg width="130" height="60" viewBox="0 0 130 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-a__log">
                             <path d="M4.95672 0H0V35.7986H4.95672V22.5177C4.95672 20.2709 5.51557 18.4984 6.63326 17.2502C7.75095 16.002 9.2817 15.353 11.1769 15.353C12.8049 15.353 14.1655 15.9521 15.2589 17.1004C16.3523 18.2738 16.9112 19.7466 16.9112 21.5191V35.8236H21.8922V21.5191C21.8922 18.2238 20.9932 15.6276 19.1951 13.6804C17.3971 11.7332 15.0402 10.7596 12.1731 10.7596C11.347 10.7596 10.5209 10.8594 9.71906 11.0841C8.89294 11.3088 8.2369 11.5584 7.70235 11.833C7.16781 12.1076 6.65756 12.4072 6.1959 12.7567C5.73424 13.1062 5.41838 13.3558 5.27259 13.5056C5.1268 13.6554 5.00532 13.7552 4.95672 13.8301V0Z" fill="#F0145A"/>
                             <path d="M32.9726 0H27.8628V35.7689H32.9726V0Z" fill="#323264"/>
                             <path d="M63.1114 25.2933L63.3669 22.7383C63.3669 19.3148 62.2428 16.4532 59.9433 14.1538C57.6439 11.8544 54.7824 10.7302 51.3588 10.7302C47.9352 10.7302 44.9715 11.9566 42.5188 14.4093C40.0661 16.862 38.8397 19.7746 38.8397 23.2493C38.8397 26.8262 40.1172 29.8921 42.621 32.447C45.1248 35.002 48.1396 36.2794 51.6143 36.2794C52.9429 36.2794 54.1692 36.075 55.3956 35.7173C56.6219 35.3086 57.6439 34.8998 58.3593 34.491C59.1258 34.0311 59.8922 33.5201 60.5565 32.958C61.2208 32.3959 61.6807 31.9872 61.8851 31.7317C62.0895 31.4762 62.2428 31.3229 62.345 31.1696L59.0236 27.8482L58.2571 28.8191C57.7461 29.4322 56.8774 30.0454 55.6511 30.7097C54.3736 31.374 53.0451 31.6806 51.6143 31.6806C49.6215 31.6806 47.9352 31.0674 46.5045 29.7899C45.0737 28.5125 44.205 27.0306 43.9495 25.2933H63.1114ZM51.3588 15.0736C53.2494 15.0736 54.7824 15.6357 56.0599 16.7087C57.2862 17.8329 58.0527 19.2126 58.3593 20.9499H44.1539C44.6138 19.2126 45.4314 17.8329 46.7089 16.7087C47.9352 15.6357 49.5193 15.0736 51.3588 15.0736Z" fill="#323264"/>
@@ -34,7 +36,7 @@
                             <path d="M127.315 57.5803V60.0283H125.716V57.5605L123.041 53.1185H124.739L126.585 56.1884L128.43 53.1185H130L127.315 57.5803Z" fill="#323264"/>
                         </svg>
                     </a>
-                     <p class="header-a__slash">
+                     <p class="header-a__slash" aria-label="slash">
                          <svg width="21" height="47" viewBox="0 0 21 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1752 0H21L5.82482 47H0L15.1752 0Z" fill="#F0145A"/>
                      </svg>
@@ -50,7 +52,7 @@
                 <a class="header-a__tel" href="tel:0800211927" >0800 211 927</a>
                 <a class="header-a__facebook" aria-label="Facebook" href="#">
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA"/>
+                        <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA" class="path"/>
                     </svg>
                 </a>
                 <div class="header-a__menu">
@@ -131,10 +133,43 @@
             <div class="container main-a-slider__wrap">
                 <h2 class="main-a-slider__h2">achievements</h2>
                 <div class="main-a-slider__cont">
-                    img.main-a-slider__item-1
+                    <div class="main-a-slider__item-1" aria-label="achivements">
+                        <img src="img/slider-a-1-1x.png" srcset="img/slider-a-1-2x.png 2x" alt="achievements" class="main-a-slider__img-1" width="80" height="60">
+                    </div>
+                    <div class="main-a-slider__item-2" aria-label="achivements">
+                        <img src="img/slider-a-2-1x.png" srcset="img/slider-a-2-2x.png 2x" alt="achievements" class="main-a-slider__img-2" width="159" height="60">
+                    </div>
+                    <div class="main-a-slider__item-3" aria-label="achivements">
+                        <img src="img/slider-a-3-1x.png" srcset="img/slider-a-3-2x.png 2x" alt="achievements" class="main-a-slider__img-3" width="195" height="60">
+                    </div>
+                    <div class="main-a-slider__item-4" aria-label="achivements">
+                        <img src="img/slider-a-4-1x.png" srcset="img/slider-a-4-2x.png 2x" alt="achievements" class="main-a-slider__img-4" width="166" height="60">
+                    </div>
+                </div>
+                <div class="slider__points" aria-label="slider">
+                    <span class="slider__point slider__point--active" aria-label="slider__point"></span>
+                    <span class="slider__point" aria-label="slider__point"></span>
+                    <span class="slider__point" aria-label="slider__point"></span>
+                    <span class="slider__point" aria-label="slider__point"></span>
+                    <span class="slider__point" aria-label="slider__point"></span>
+                    <span class="slider__point" aria-label="slider__point"></span>
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container footer__wrap">
+            <p class="footer__wrap-addresses">Kyiv, Mechnikova str, 14/1</p>
+            <a class="footer__wrap-map" href="#"> on map</a>
+            <p class="footer__wrap-inc">© 2021 HLEGAL Law company, LLC</p>
+            <a class="footer__wrap-facebook" aria-label="Facebook" href="#">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <path d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z" fill="#24A3FF" class="path"/>
+                </svg>
+            </a>
+            <a class="footer__wrap-tel" href="tel:0800211927" >0800 211 927</a>
+            <a class="footer__wrap-email" href="mailto:contact@forstudy.space" >contact@forstudy.space</a>
+        </div>
+    </footer>
 </body>
 </html>
