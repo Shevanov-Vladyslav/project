@@ -78,6 +78,9 @@
     .header {
         &__h-back {
             padding: 238px 0 105px;
+            &-h2 {
+                margin-top: 34px;
+            }
         }
     }
 }

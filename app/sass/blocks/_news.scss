@@ -93,12 +93,25 @@
 
 @media screen and(max-width: 767px){
     .news {
+        &__wrap {
+            padding-bottom: 16px;
+        }
+        &__h2 {
+            padding-top: 9px;
+        }
+        &__inform {
+            padding: 27px 29px;
+            &-date {
+                margin-top: 16px;
+                margin-bottom: 0;
+            }
+        }
         &__items {
             display: grid;
-            grid-template-columns: auto;
+            grid-template-columns: 1fr 1fr;
             grid-template-areas: "one two"
                                  "three three";
-            gap: 30px
+            gap: 20px 30px;
         }
         &__item {
             &--first {
@@ -129,11 +142,15 @@
 @media screen and (max-width: 500px){
     .news {
         &__wrap {
-            padding-top: 40px;
+            padding: 27px 30px;
+            padding-bottom: 30px;
         }
         &__h2 {
             font-size: 30px;
             line-height: 37px;
+        }
+        &__inform {
+            padding-bottom: 14px;
         }
     }
 }

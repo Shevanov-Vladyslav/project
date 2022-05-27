@@ -105,6 +105,35 @@
     fill: $pink-red;
 }
 
+@media screen and (max-width: 767px){
+    .footer {
+        &__wrap {
+            margin: 0 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 766px){
+    .footer {
+        &__wrap {
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: "one  one  two "
+                                 "four five six"
+                                 "three three three";
+            justify-content: center;
+            gap: 20px 0;
+            padding: 34px 110px 0;
+            &-inc {
+                justify-self: center;
+            }
+            &-facebook {
+                justify-self: end;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 660px){
     .footer {
         &__wrap {
@@ -128,6 +157,7 @@
             }
             &-facebook {
                 padding-bottom: 10px;
+                justify-self: center;
             }
             &-tel {
                 padding-bottom: 10px;
@@ -151,12 +181,13 @@
 @media screen and (max-width: 500px){
     .footer {
         &__wrap {
-            padding-top: 14px;
             margin: 0;
+            padding: 14px 0 23px;
+            gap: 0;
             &-addresses {
-                font-size: 12px;
-                line-height: 15px;
-                padding-top: 31px;
+                font-size: 16px;
+                line-height: 20px;
+                padding-top: 18px;
             }
         }
     }

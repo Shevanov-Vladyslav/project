@@ -213,9 +213,10 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 501px) {
     .container {
-        padding: 0 30px;
+       padding-left: 15px;
+       padding-right: 15px;
     }
 }
 

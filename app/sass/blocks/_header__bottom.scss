@@ -88,12 +88,23 @@
 @media screen and (max-width: 767px){
     .header {
         &__bottom {
+            padding-top: 11px;
+            padding-bottom: 35px;
+            &-h2 {
+                padding-top: 7px;
+            }
             &-wrap {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(3, 1fr);
                 grid-template-areas: "first second"
-                                     "fourth  third"
+                                     "third fourth"
                                      "fifth sixth";
+                gap: 47px 60px;
+            }
+            &-item {
+                &-text {
+                    margin: 0;
+                }
             }
         }
     }
@@ -107,8 +118,8 @@
                 grid-template-rows: repeat(6, auto);
                 grid-template-areas: "first"
                                      "second"
-                                     "fourth"
                                      "third"
+                                     "fourth"
                                      "fifth"
                                      "sixth";
             }
@@ -128,11 +139,11 @@
                 padding-bottom: 27px;
             }
             &-wrap {
-                gap: 16px 60px;
+                gap: 27px 60px;
             }
             &-item {
                 &-link {
-                    padding-bottom: 5px;
+                    padding-bottom: 14px;
                 }
             }
         }

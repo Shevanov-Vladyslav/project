@@ -134,8 +134,19 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    .sponsors {
+        &__h2 {
+            padding-bottom: 23px;
+        }
+    }
+}
+
 @media screen and (max-width: 900px){
     .sponsors {
+        &__h2 {
+            padding-bottom: 17px;
+        }
         &__wrap {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 120px 120px 120px 120px;
@@ -164,6 +175,9 @@
 
 @media screen and (max-width: 470px){
     .sponsors {
+        &__hr {
+            padding: 16px 0 0;
+        }
         &__wrap {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 120px);
@@ -173,7 +187,6 @@
                                  "four"
                                  "fifth"
                                  "six";
-            padding-bottom: 30px;
         }
         &__items {
             &--7,

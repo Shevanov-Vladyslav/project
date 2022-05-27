@@ -9,9 +9,9 @@
     &__text {
         grid-area: text;
         font-size: 19px;
-        line-height: 30px;
+        line-height: 29px;
         color:$twelve;
-
+        margin: 0;
     }
     &__h2 {
         grid-area: h2;
@@ -30,6 +30,20 @@
     .main-a-medium {
         &__wrap {
             padding: 60px;
+            grid-template-columns: 3fr 2fr;
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-a-medium {
+        &__wrap {
+            padding-top: 23px;
+            padding-bottom: 47px;
+        }
+        &__h2 {
+            padding-top: 32px;
         }
     }
 }
@@ -41,6 +55,19 @@
             grid-template-areas: "text"
                                  "h2";
             gap: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-a-medium {
+        &__wrap {
+            padding: 30px 30px 50px;
+        }
+        &__h2 {
+            font-size: 30px;
+            line-height: 37px;
+            padding-top: 26px;
         }
     }
 }

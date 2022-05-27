@@ -1,33 +1,35 @@
 .main-a-top {
     &__wrap {
-        padding: 60px 180px;
+        padding: 25px 180px;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 2fr 1fr;
         grid-template-areas: "inform stat";
         gap: 30px;
     }
     &__information {
         grid-area: inform;
-        max-width: 600px;
+
         &-h2 {
             font-weight: 700;
-            font-size: 38px;
+            font-size: 36px;
             line-height: 46px;
             background: $lineral-h2;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
+            margin-bottom: 0;
         }
         &-text {
             font-size: 19px;
             line-height: 30px;
             color: $twelve;
+            margin-bottom: 0;
         }
     }
     &__statistics {
         grid-area: stat;
         max-width: 388px;
-        padding-left: 30px;
+        padding-left: 5px;
         &-h2 {
             font-weight: 700;
             font-size: 36px;
@@ -36,6 +38,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
+            margin: 29px 0 0;
             &--year {
                 &::before {
                     content: '';
@@ -81,7 +84,8 @@
 @media screen and (max-width: 1100px){
     .main-a-top {
         &__wrap {
-            padding: 60px;
+            padding: 34px 60px 60px;
+            grid-template-columns: 3fr 2fr;
         }
     }
 }
@@ -89,7 +93,10 @@
 @media screen and (max-width: 800px){
     .main-a-top {
         &__wrap {
+            grid-template-columns: 1fr;
             grid-template-areas: "inform" "stat";
+            gap: 0;
+            padding: 34px 60px 7px;
         }
         &__information {
             width: 100%;
@@ -97,6 +104,29 @@
         &__statistics {
             max-width: 100%;
             border-left: 3px solid $point-af-bef;
+            padding-left: 32px;
+            &-test {
+                margin-top: 7px;
+            }
         }
     }
 }
+
+@media screen and (max-width: 500px){
+    .main-a-top {
+        &__wrap {
+            padding: 0 30px;
+        }
+        &__information {
+            margin-top: 17px;
+            &-h2 {
+                font-size: 30px;
+                line-height: 37px;
+            }
+            &-text {
+                margin-top: 27px;
+            }
+        }
+    }
+}
+

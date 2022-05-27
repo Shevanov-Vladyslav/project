@@ -1,7 +1,7 @@
-const menu = document.querySelector('.header__top-menu');
-const burger = document.querySelector('.header__top-burger');
-const overlay = document.querySelector('.header__overlay');
-const body = document.querySelector('body');
+var menu = document.querySelector('.header__top-menu');
+var burger = document.querySelector('.header__top-burger');
+var overlay = document.querySelector('.header__overlay');
+var body = document.querySelector('body');
 
 burger.addEventListener('click', () => {
     menu.classList.toggle('show');
@@ -12,7 +12,7 @@ burger.addEventListener('click', () => {
 
 
 body.addEventListener('click', (event) => {
-    const element = event.target;
+    var element = event.target;
 
     if (element.classList.contains('header__top')) {
         menu.classList.remove('show');
